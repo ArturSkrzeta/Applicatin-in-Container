@@ -134,7 +134,7 @@
 											# command to run on container start<br>
 											<code>CMD [ "python", "./main.py" ]</code>
 										</li>
-										<li>Due to the fact, the application’s dependencies change less frequently than the Python code, the insctruction of installing dependencies precedes the instruction of exporting app's source code.</li>
+										<li>Due to the fact, the application’s dependencies change less frequently than the Python code, the insctruction of installing dependencies precedes the instruction of exporting app's source code to the container.</li>
 										<li>That way, we have the source code layer upon the dependencies layer and any changes to the code won't affect the dependencies layer.</li>
 									</ul>
 

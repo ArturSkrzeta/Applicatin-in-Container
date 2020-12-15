@@ -146,7 +146,24 @@
 										<li>That way, we have the source code layer upon the dependencies layer and any changes to the code won't affect the dependencies layer.</li>
 									</ul>
 
-									<h5>Docker commands:</h5>
+									<h5>Terminal:</h5>
+									<ul>
+										<li>Building image and running a container:
+											<br>
+											changing directory to the one of Dockerfile's:<br>
+											<code>cd ./docker_test</code><br>
+											building images giving a name and current directory (dot):<br>
+											<code>docker build -t 'image_name' .</code><br>
+											listiong all images:<br>
+											<code>docker images</code><br>
+											running contianer which runs application as well:<br>
+											<code>docker run -ti --name container_name image_name</code><br>
+											check all the docker containers:<br>
+											<code>docker ps</code><br>
+										</li>
+									</ul>
+
+									<h5>Other Docker commands:</h5>
 									<ul>
 										<li>Here are some useful docker cmd commands:
 											<br>

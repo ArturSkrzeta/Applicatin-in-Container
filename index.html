@@ -117,7 +117,28 @@
 										<li>Caching mechanizm works the best when we place the insctructions that may undergo some modifications after the ones that will be stable and unchanged along the time.</li>
 									</ul>
 
-									
+									<h5>Example:</h5>
+									<ul>
+										<li>
+											<br>
+											# set base image downloaded from Docker repository<br>
+											<code>FROM python:3.8</code><br>
+											# set the working directory in the container<br>
+											<code>WORKDIR /code</code><br>
+											# copy the dependencies file forem dockerfile directory to the current working directory of the container<br>
+											<code>COPY requirements.txt .</code><br>
+											# install dependencies<br>
+											<code>RUN pip install -r requirements.txt</code><br>
+											# copy the content of the local src directory to the working directory<br>
+											<code>COPY src/ .</code><br>
+											# command to run on container start<br>
+											<code>CMD [ "python", "./main.py" ]</code>
+										</li>
+										<li></li>
+									</ul>
+
+
+
 								</div>
 							</section>
 

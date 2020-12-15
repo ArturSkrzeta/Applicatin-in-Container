@@ -150,16 +150,24 @@
 									<ul>
 										<li>Here are some useful docker cmd commands:
 											<br>
+											checking docker after installation:<br>
 											<code>docker -v</code><br>
 											<code>docker run hello-world</code><br>
-											<code>docker container ls -a  == docker ps</code><br>
-											<code>docker container rm xxx</code><br>
+											listing all containers:<br>
+											<code>docker container ls -a</code><br>
+											<code>docker ps</code><br>
+											removing container with name:<br>
+											<code>docker container rm container_name</code><br>
+											listing all images:<br>
 											<code>docker images</code><br>
+											removing image with name:<br>
 											<code>docker image rm xxx</code><br>
-											<code>docker pull python --- it pulls down image, it doesn't create a container</code><br>
+											pulling image from docker hub, however it doesn't create a container:<br>
+											<code>docker pull python</code><br>
 											<code>docker images python</code><br>
 											<code>docker container stop image_name</code><br>
-											<code>docker container exec -it image_name bash --- entering container</code><br>
+											entering container:<br>
+											<code>docker container exec -it image_name bash</code><br>
 										</li>
 										<li>Getting all dependencies for a Python app:
 											<br>

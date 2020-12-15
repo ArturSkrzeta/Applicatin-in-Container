@@ -134,9 +134,9 @@
 											# command to run on container start<br>
 											<code>CMD [ "python", "./main.py" ]</code>
 										</li>
+										<li>Due to the fact, the application’s dependencies change less frequently than the Python code, the insctruction of installing dependencies precedes the instruction of exporting app's source code.</li>
+										<li>That way, we have the source code layer upon the dependencies layer and any changes to the code won't affect the dependencies layer.</li>
 									</ul>
-
-
 
 								</div>
 							</section>
@@ -148,7 +148,7 @@
 									<h3>Setup</h3>
 									<p>Following installation required:</p>
 									<ul>
-										<li>pip install pandas</li>
+										<li>Docker installation from https://www.docker.com/</li>
 									</ul>
 								</div>
 							</section>
@@ -156,7 +156,7 @@
 							<section id="five">
 								<div class="container">
 									<h3>Source Code</h3>
-									<p>You can view the source code: <a href="">HERE</a></p>
+									<p>You can view the source code: <a href="#">HERE</a></p>
 									<p>&nbsp</p>
 								</div>
 							</section>

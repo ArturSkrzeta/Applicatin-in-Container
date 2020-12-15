@@ -1,4 +1,4 @@
-# Applicatin-in-Container
+# Application-in-a-Container
 
 ### We use docker when:
 - we want to make an application portable,

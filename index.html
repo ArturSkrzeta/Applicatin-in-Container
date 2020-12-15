@@ -56,14 +56,13 @@
 											<li>App deployment on cloud's server.</li>
 										</ul>
 
-										<h5>Deckerizing an application</h5>
+										<h5>Deckerizing an application:</h5>
 										<ol>
 											<li>Preparing DockerFile that contains set of instructions.</li>
 											<li>Building Docker Image.</li>
 											<li>Any missing elements are downloaded (pulled) from Docker registry into Docker image.</li>
 											<li>Running many Docker containers based on built Docker image.</li>
 										</ol>
-
 										<img src="images/dockerflow.JPG">
 
 									</header>
@@ -86,9 +85,39 @@
 							<section id="three">
 								<div class="container">
 									<h3>Demo</h3>
+
+									<h5>Dockerfile:</h5>
 									<ul>
-									  <li>Training SVM model with Numpy.</li>
+									  <li>A text document that contains all the commands a user could call on command prompt to assemble an image.</li>
+										<li>Simply put, it lists steps to create Docker Image i.e.:
+											<br>
+											- pulling base image from Docker Registry,<br>
+											- stating working directory in a container,<br>
+											- copying all dependent files into a container working directory,<br>
+											- calling commands in order to install dependencies,<br>
+											- copying source code into a container working directory,<br>
+											- calling commands in order to run an application.
+										</li>
+										<li>Every Dockerfile's step I list above is executed by Docekr builder in the given order: from top to bottom.</li>
+										<li>Docekr builder goes through a Dockerfile and for each instruction or command in there it generates an image layer and stacks it.
+											The more insctructions or commands a Dockerfile includes, the more layers as stachk upon each other.</li>
+										<li>Here comes Docker image definition which is a stack of different layers built due to what we got in Dockerfile.</li>
 									</ul>
+
+									<h5>Docker image:</h5>
+									<ul>
+										<li>For every new Docker image that builder creates, there are check being made against cached images that were built before. In order to explain this mechanizm lets assume a scenario:
+											<br>
+											- the Docker file that had been used for building images so far was changed by modifing a one of instructions,<br>
+											- images that were built from that Dockerfile before were cached,<br>
+											- Docker builder goes through instrucion of Dockerfile and detects modified instruction,<br>
+											- Docker builder recognizes what layer in cached image modified instruction affects,<br>
+											- Docker builder rebuilts that image layer and all the onec coming after.
+										</li>
+										<li>Caching mechanizm works the best when we place the insctructions that may undergo some modifications after the ones that will be stable and unchanged along the time.</li>
+									</ul>
+
+									
 								</div>
 							</section>
 

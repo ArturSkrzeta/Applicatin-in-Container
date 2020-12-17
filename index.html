@@ -107,6 +107,22 @@
 											<li>When docker run command: docker daemon runs an image into docker container within docker host.</li>
 										</ul>
 
+										<h5>Kubernetes aka. k8s:</h5>
+										<ul>
+											<li>Open-source platform for clustering, running, scaling and managing containerized applicatons.</li>
+											<li>It groups conatiners into logical services that builds up final application.</li>
+											<li>Key elements:
+												- <b>Pod</b> - represents a runnable unit of work. Can store one or more containers. It's connected via network to the kubernetes ecosystem.<br>
+												- <b>Replication controller</b> - managing number of pods. Contains a pod template for creating any number of pods. That allows to manage pods life cycle including scaling up or down, rolling deployments and monitoring.<br>
+												- <b>Service</b> - tells rest of the kubernetes ecosystem including other pods and replication controllers what service your application provides. Storing ip address and ports of your service.<br>
+												- <b>Volume</b> - location where containers access and store data.<br>
+												- <b>Labels</b> - nametags to identify things and we can query based on these labels. Can be used to indicate stability, roles and other important attributes.<br>
+												- <b>Namespace</b> - grouping mechanism that segments pods, replication controllers, volumes and services. It provides a degree of isolation.
+											</li>
+										</ul>
+
+
+
 									</header>
 								</div>
 							</section>

@@ -96,7 +96,13 @@
 
 										<h5>Docker Architecture:</h5>
 										<ol>
-											<li>Docker Daemon on a server - manages docker objects: images, containers, network. Runs on OS.</li>
+											<li>Docker Daemon on a server - manages docker objects: images, containers, network. Runs on OS. Its build from following components:
+												<br>
+												- volumes for pesisting data in a docker container.<br>
+												- network interface for docker containers,<br>
+												- container runtime for managing container lifecycle - it runs and stops a contaier.<br>
+												- builder that builds images from a Dockerfile.
+											</li>
 											<li>REST API available by Docker Daemon as interface to interact to Daemon - passing docker commands.</li>
 											<li>Client Docker CLI (Command Line Interface) for communication with docker daemon.</li>
 										</ol>
@@ -145,6 +151,7 @@
 												- <b>Labels</b> - nametags to identify things and we can query based on these labels. Can be used to indicate stability, roles and other important attributes.<br>
 												- <b>Namespace</b> - grouping mechanism that segments pods, replication controllers, volumes and services. It provides a degree of isolation.
 											</li>
+											<li>As to Kubernetes architecutre it has its own CLI, network interface, and volume and it doesn't build images inside of clusters so only thing it needs when clustering docker containers is docker container runtime.</li>
 										</ul>
 
 										<h5>Kubernetes Load Balancer:</h5>

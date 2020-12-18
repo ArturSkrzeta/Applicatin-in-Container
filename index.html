@@ -120,11 +120,18 @@
 												3. Running it with command: <code>docker-compose up</code>.
 											</li>
 											<li>Docker Compose is included in Docker Desktop for Windows.</li>
-											<li>Docker Compose can be installed with pip as well: <code>pip install docker-compose</code>.</li>
+											<li>Docker Compose can be installed alos with pip as well: <code>pip install docker-compose</code>.</li>
+											<li>When containerizing, we can specify which files can be ignored by putting the into <code>.dockerignore</code>:
+												<br>
+												- over there we just need to specify directory of it:<br>
+												<code>venv/</code><br>
+												<code>__pycache__/</code>
+											</li>
 										</ul>
 
 										<h5>Kubernetes aka k8s:</h5>
 										<ul>
+											<li>Kubernetes supports different container runtimes.</li>
 											<li>Open-source platform for clustering, running, scaling and managing containerized applicatons.</li>
 											<li>It groups conatiners into logical services that builds up final application.</li>
 											<li>Key elements:
@@ -140,7 +147,7 @@
 
 										<h5>Kubernetes Load Balancer:</h5>
 										<ul>
-											<li>Kubernetes is able to create multiple instances of the application such that a traffic can be distributed evenly preventing app from getting crashed.</li>
+											<li>Kubernetes is able to create multiple instances (pods) of the application such that a traffic can be distributed evenly preventing app from getting crashed.</li>
 											<li>User accessing the application will not directly hit its URL but they will call load balancer that distributes traffic over number of app's intances.</li>
 											<li>That way Kubernetes serves the application scalably - when one app instance crashes it creates another ensuring reliable and scalable app deployment.</li>
 										</ul>
@@ -150,11 +157,11 @@
 											<li>It requires setting config file up: <code>deployment.yaml</code></li>
 											<li>Deploying applications with Kubernetes can be easily managed using the cli tool called kubectl:
 												<br>
-												<code>kubectl apply -f deployment.yaml</code><br>
+												<code>kubectl apply -f deployment.yaml</code>.
 											</li>
 											<li>Displaying dashboard:
 												<br>
-												<code>minikube dashboard</code>
+												<code>minikube dashboard</code>.
 											</li>
 										</ul>
 

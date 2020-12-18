@@ -112,6 +112,7 @@
 										<ul>
 											<li>It is very helpful when we use different technologies and each of them we want to contenerize in its own isolated environment.</li>
 											<li>We can use Docke Compose for connecting and orchestrating them in order to define and run multi-container Docker applications.</li>
+											<li>Each container needs to have its own Dockerfile that defines its running environment.</li>
 											<li>All the necessary configuration of how much conatiers (services) make up the application is placed in the compose file format: <code>docker-compose.yml</code></li>
 											<li>There are 3 steps to make it run:
 												<br>
@@ -119,6 +120,7 @@
 												2. Defining all the necessary sevices that make up the applicaion in the file:<br> <code>docker-compose.yml</code>.<br>
 												3. Running it with command: <code>docker-compose up</code>.
 											</li>
+											<li>That way we can define services and link them with each other.</li>
 											<li>Docker Compose is included in Docker Desktop for Windows.</li>
 											<li>Docker Compose can be installed alos with pip as well: <code>pip install docker-compose</code>.</li>
 											<li>When containerizing, we can specify which files can be ignored by putting the into <code>.dockerignore</code>:
@@ -217,7 +219,7 @@
 										<li>Caching mechanizm works the best when we place the insctructions that may undergo some modifications after the ones that will be stable and unchanged along the time.</li>
 									</ul>
 
-									<h5>Example:</h5>
+									<h5>Dockerfile example:</h5>
 									<ul>
 										<li>Here is the example of Dockerfile:
 											<br>
@@ -291,6 +293,42 @@
 											<code>pip freeze > requirements.txt</code>
 										</li>
 									</ul>
+
+									<h5>Docker-compose.yml example:</h5>
+									<ul>
+										<li>Code:
+											<br>
+											<code>version: "3.7"</code><br>
+											<code>services:</code><br>&nbsp&nbsp&nbsp
+												<code>flask:</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												# building the flask service (container) using the Dockerfile in the flask directory<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												<code>build: ./flask</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												# give the flask contianer a name<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												<code>container_name: flask</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												# instructing Docker to alwyas restart the service<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												<code>reastart: always</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												# setting environment variables we want to pass into the container<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												<code>environment:</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+													<code>- APP_NAME=MyFlaskApp</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+													<code>- DB_USERNAME=user_name</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												# listing ports for internal services on the same network<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+												<code>expose:</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+													<code>- 8080</code><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+										</li>
+										<li>Cmd:
+											<br>
+											- building all contaiers:<br>
+											<code>docker-compose build</code><br>
+											- running all containers:<br>
+											<code>docker-compose up</code><br>
+											- when changes to a code we need to rebuild contaienrs:<br>
+											<code>docker-compose up --build</code><br>
+											- stopping containers:<br>
+											<code>docker-compose down<code>
+										</li>
+									</ul>
+
+
 								</div>
 							</section>
 

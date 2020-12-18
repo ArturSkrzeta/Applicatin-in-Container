@@ -123,7 +123,7 @@
 											<li>Docker Compose can be installed with pip as well: <code>pip install docker-compose</code>.</li>
 										</ul>
 
-										<h5>Kubernetes aka. k8s:</h5>
+										<h5>Kubernetes aka k8s:</h5>
 										<ul>
 											<li>Open-source platform for clustering, running, scaling and managing containerized applicatons.</li>
 											<li>It groups conatiners into logical services that builds up final application.</li>
@@ -143,6 +143,19 @@
 											<li>Kubernetes is able to create multiple instances of the application such that a traffic can be distributed evenly preventing app from getting crashed.</li>
 											<li>User accessing the application will not directly hit its URL but they will call load balancer that distributes traffic over number of app's intances.</li>
 											<li>That way Kubernetes serves the application scalably - when one app instance crashes it creates another ensuring reliable and scalable app deployment.</li>
+										</ul>
+
+										<h5>Deployment on Kubernetes</h5>
+										<ul>
+											<li>It requires setting config file up: <code>deployment.yaml</code></li>
+											<li>Deploying applications with Kubernetes can be easily managed using the cli tool called kubectl:
+												<br>
+												<code>kubectl apply -f deployment.yaml</code><br>
+											</li>
+											<li>Displaying dashboard:
+												<br>
+												<code>minikube dashboard</code>
+											</li>
 										</ul>
 
 									</header>
@@ -282,6 +295,8 @@
 									<p>Following installation required:</p>
 									<ul>
 										<li>Docker installation from https://www.docker.com/</li>
+										<li>Enable Kubernetes in Docker Desktop settings.</li>
+										<li>Minikube</li>
 									</ul>
 								</div>
 							</section>

@@ -244,19 +244,19 @@
 									<ul>
 										<li>Building image and running a container:
 											<br>
-											changing directory to the one of Dockerfile's:<br>
+											- changing directory to the one of Dockerfile's:<br>
 											<code>cd ./docker_test</code><br>
-											building image giving a name and current directory (dot):<br>
+											- building image giving a name and current directory (dot):<br>
 											<code>docker build -t image_name .</code><br>
-											listing all images:<br>
+											- listing all images:<br>
 											<code>docker images</code><br>
-											running container which runs application as well:<br>
+											- running container which runs application as well:<br>
 											<code>docker run -ti --name container_name image_name</code><br>
-											check all the docker containers:<br>
+											- check all the docker containers:<br>
 											<code>docker ps</code><br>
-											mapping local directory to container container in order to get outputs from container to local directory:<br>
-											<code>docker run -v C:\...\docker_test:/code</code><br>&nbsp&nbsp&nbsp
-												mapping local dir: <code>C:\...\docker_test</code> to container dir: <code>/code</code>
+											- mapping local directory to container container in order to get outputs from container to local directory:
+											<code>docker run -v C:\...\docker_test:/code</code><br>
+											- mapping local dir: <code>C:\...\docker_test</code> to container dir: <code>/code</code>
 										</li>
 									</ul>
 
@@ -264,32 +264,32 @@
 									<ul>
 										<li>Here are some useful docker cmd commands:
 											<br>
-											checking docker after installation:<br>
+											- checking docker after installation:<br>
 											<code>docker -v</code><br>
 											<code>docker run hello-world</code><br>
-											listing all containers:<br>
+											- listing all containers:<br>
 											<code>docker container ls -a</code><br>
 											<code>docker ps</code><br>
-											removing container with name:<br>
+											- removing container with name:<br>
 											<code>docker container rm container_name</code><br>
-											listing all images:<br>
+											- listing all images:<br>
 											<code>docker images</code><br>
-											removing image with name:<br>
+											- removing image with name:<br>
 											<code>docker image rm xxx</code><br>
-											pulling image from docker hub, however it doesn't create a container:<br>
+											- pulling image from docker hub, however it doesn't create a container:<br>
 											<code>docker pull python</code><br>
 											<code>docker images python</code><br>
 											<code>docker container stop image_name</code><br>
-											entering container:<br>
+											- entering container:<br>
 											<code>docker container exec -it image_name bash</code><br>
 										</li>
 										<li>Getting all dependencies for a Python app:
 											<br>
-											activating Virtual Environment:<br>
+											- activating Virtual Environment:<br>
 											<code>env/scripts>activate</code><br>
-											listing all lisnalled dependecies:<br>
+											- listing all lisnalled dependecies:<br>
 											<code>pip list</code><br>
-											pasting all dependencies with their version into a txt file:<br>
+											-pasting all dependencies with their version into a txt file:<br>
 											<code>pip freeze > requirements.txt</code>
 										</li>
 									</ul>

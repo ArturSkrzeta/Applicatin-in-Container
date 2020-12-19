@@ -59,10 +59,10 @@
 										<h5>Deckerizing an application:</h5>
 										<ol>
 											<li>Preparing DockerFile that contains set of instructions.</li>
-											<li>Importing a basic Docker image from the Docker registry.</li>
 											<li>Building Docker image due to instructions.</li>
-											<li>Any missing elements are downloaded (pulled) from Docker registry into Docker image.</li>
-											<li>Running many Docker containers based on built Docker image.</li>
+											<li>When building, we import basic Docker image from the Docker registry.<li>
+											<li>Then on top of that, we append following elements of app's environment due to Dockerfile's instructions.</li>
+											<li>When Docker image we can run as many Docker containers as we want using built image.</li>
 										</ol>
 
 										<img src="images/dockerflow.JPG">

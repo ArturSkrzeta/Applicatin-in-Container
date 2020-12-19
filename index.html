@@ -264,8 +264,8 @@
 											<code>docker build -t image_name:latest .</code><br>
 											- listing all images:<br>
 											<code>docker images</code><br>
-											- running container which runs application as well:<br>
-											<code>docker run -ti --name container_name image_name</code><br>
+											- running container which runs application on port 5000:<br>
+											<code>docker run -it -d -p 5000:5000 --name container_name image_name</code><br>
 											- check all the docker containers:<br>
 											<code>docker ps</code><br>
 											- mapping local directory to container container in order to get outputs from container to local directory:

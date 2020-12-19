@@ -59,8 +59,9 @@
 										<h5>Deckerizing an application:</h5>
 										<ol>
 											<li>Preparing DockerFile that contains set of instructions.</li>
-											<li>Building Docker image due to instructions.</li>
-											<li>When building, we import basic Docker image from the Docker registry.<li>
+											<li>Running build command to buld Docker image due to instructions.</li>
+											<li>Docker reaches the cache memeory to see if some of the instructions were executed earlier so that it doesn't execute it again.</li>
+											<li>When building first time, we import basic Docker image from the Docker registry.<li>
 											<li>Then on top of that, we append following elements of app's environment due to Dockerfile's instructions.</li>
 											<li>When Docker image we can run as many Docker containers as we want using built image.</li>
 										</ol>
@@ -259,8 +260,8 @@
 											<br>
 											- changing directory to the one of Dockerfile's:<br>
 											<code>cd ./docker_test</code><br>
-											- building image giving a name and current directory (dot):<br>
-											<code>docker build -t image_name .</code><br>
+											- building image giving an image_name:tag and current directory (dot):<br>
+											<code>docker build -t image_name:latest .</code><br>
 											- listing all images:<br>
 											<code>docker images</code><br>
 											- running container which runs application as well:<br>

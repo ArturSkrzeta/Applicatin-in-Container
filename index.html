@@ -164,6 +164,10 @@
 
 										<h5>Deployment on Kubernetes</h5>
 										<ul>
+											<li>Checking if kubernetes cluster installed
+												<br>
+												<code>kubectl version --client</code>
+											</li>
 											<li>It requires setting config file up: <code>deployment.yaml</code></li>
 											<li>Deploying applications with Kubernetes can be easily managed using the cli tool called kubectl:
 												<br>
@@ -299,6 +303,26 @@
 											<code>pip list</code><br>
 											-pasting all dependencies with their version into a txt file:<br>
 											<code>pip freeze > requirements.txt</code>
+										</li>
+									</ul>
+
+									<h5>Pulling from Docker Hub</h5>
+									<ul>
+										<li>Cmd:
+											<br>
+											<code>docker pull mongo</code><br>
+											<code>mkdir mongodb_test</code><br>
+											<code>cd mongodb_test</code><br>
+											when running mapping vlime with -v and ports -p:<br>
+											<code>docker run -it -v mongodata:/data/db -p 27017:27017 --name mongodb -d mongo</code>
+											<code>docker exec -it my_mongo bash</code><br>
+											<code>mongo</code><br>
+											<code>show dbs></code><br>
+											<code>use test</code><br>
+											<code>db.user.insert({"name":"Artur"})</code><br>
+											<code>db.user.find()</code><br>
+											<code>exit</code><br>
+											<code>exit</code>
 										</li>
 									</ul>
 

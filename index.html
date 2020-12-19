@@ -156,7 +156,8 @@
 											<li>It groups conatiners into logical services that builds up final application.</li>
 											<li>Key elements:
 												<br>
-												- <b>Pod</b> - represents a runnable unit of work. Can store one or more containers. It's connected via network to the kubernetes ecosystem.<br>
+												- <b>Node</b> - a host that the container runs on.
+												- <b>Pod</b> - represents a runnable unit of work. Can store one or more containers. It's connected via network to the kubernetes ecosystem. It has ist own unique IP address and storage namespace.<br>
 												- <b>Replication controller</b> - managing number of pods. Contains a pod template for creating any number of pods. That allows to manage pods life cycle including scaling up or down, rolling deployments and monitoring.<br>
 												- <b>Service</b> - tells rest of the kubernetes ecosystem including other pods and replication controllers what service your application provides. Storing ip address and ports of your service.<br>
 												- <b>Volume</b> - location where containers access and store data.<br>
@@ -180,6 +181,7 @@
 												<code>kubectl version --client</code>
 											</li>
 											<li>It requires setting config file up: <code>deployment.yaml</code></li>
+											<li><code>.yaml</code> extension stands for <b>yet another markup language</b></li>
 											<li>Deploying applications with Kubernetes can be easily managed using the cli tool called kubectl:
 												<br>
 												<code>kubectl apply -f deployment.yaml</code>.
@@ -341,6 +343,15 @@
 											<code>exit</code><br>
 											exiting the contianer:<br>
 											<code>exit</code>
+										</li>
+									</ul>
+
+									<h5>Pushing image to Docker Hub:</h5>
+									<ul>
+										<li>Cmd:
+											<br>
+											<code>docker login</code><br>
+											<img src="images/docker_push2.JPG">
 										</li>
 									</ul>
 

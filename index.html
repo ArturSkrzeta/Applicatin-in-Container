@@ -59,7 +59,8 @@
 										<h5>Deckerizing an application:</h5>
 										<ol>
 											<li>Preparing DockerFile that contains set of instructions.</li>
-											<li>Building Docker Image.</li>
+											<li>Importing a basic Docker image from the Docker registry.</li>
+											<li>Building Docker image due to instructions.</li>
 											<li>Any missing elements are downloaded (pulled) from Docker registry into Docker image.</li>
 											<li>Running many Docker containers based on built Docker image.</li>
 										</ol>
@@ -306,7 +307,7 @@
 										</li>
 									</ul>
 
-									<h5>Pulling from Docker Hub</h5>
+									<h5>Pulling from Docker Hub:</h5>
 									<ul>
 										<li>Cmd:
 											<br>
@@ -319,7 +320,7 @@
 											<code>docker exec -it my_mongo bash</code><br>
 											entering mongo shell:<br>
 											<code>mongo</code><br>
-											<code>show dbs></code><br>
+											<code>show dbs</code><br>
 											<code>use test</code><br>
 											<code>db.user.insert({"name":"Artur"})</code><br>
 											<code>db.user.find()</code><br>

@@ -243,11 +243,13 @@
 											<code>WORKDIR /code</code><br>
 											# copy the file form dockerfile directory to the current working directory of the container<br>
 											<code>COPY requirements.txt .</code><br>
-											# install dependencies<br>
+											# running command inside docker container while image running: install dependencies<br>
 											<code>RUN pip install -r requirements.txt</code><br>
 											# copy the content of the local src directory to the working directory<br>
 											<code>COPY src/ .</code><br>
-											# command to run on container start<br>
+											# app will run on port 5000 inside docker contaier
+											<code>Expose: 5000</code>
+											# making container in a running stage <br>
 											<code>CMD [ "python", "./main.py" ]</code>
 										</li>
 										<li>Due to the fact, the application’s dependencies change less frequently than the Python code, the insctruction of installing dependencies precedes the instruction of exporting app's source code to the container.</li>

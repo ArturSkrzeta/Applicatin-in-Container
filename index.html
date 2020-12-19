@@ -315,13 +315,17 @@
 											<code>cd mongodb_test</code><br>
 											when running an image, we map volume with -v and ports -p:<br>
 											<code>docker run -it -v mongodata:/data/db -p 27017:27017 --name mongodb -d mongo</code>
+											entering container's bash:<br>
 											<code>docker exec -it my_mongo bash</code><br>
+											entering mongo shell:<br>
 											<code>mongo</code><br>
 											<code>show dbs></code><br>
 											<code>use test</code><br>
 											<code>db.user.insert({"name":"Artur"})</code><br>
 											<code>db.user.find()</code><br>
+											exiting a mongo's shell:<br>
 											<code>exit</code><br>
+											exiting the contianer:<br>
 											<code>exit</code>
 										</li>
 									</ul>

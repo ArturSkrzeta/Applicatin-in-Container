@@ -156,7 +156,7 @@
 											<li>It groups conatiners into logical services that builds up final application.</li>
 											<li>Key elements:
 												<br>
-												- <b>Node</b> - a host that the container runs on.
+												- <b>Node</b> - a host that the container runs on.<br>
 												- <b>Pod</b> - represents a runnable unit of work. Can store one or more containers. It's connected via network to the kubernetes ecosystem. It has ist own unique IP address and storage namespace.<br>
 												- <b>Replication controller</b> - managing number of pods. Contains a pod template for creating any number of pods. That allows to manage pods life cycle including scaling up or down, rolling deployments and monitoring.<br>
 												- <b>Service</b> - tells rest of the kubernetes ecosystem including other pods and replication controllers what service your application provides. Storing ip address and ports of your service.<br>
@@ -227,7 +227,7 @@
 										</li>
 										<li>Every Dockerfile's step I list above is executed by Docekr builder in the given order: from top to bottom.</li>
 										<li>Docekr builder goes through a Dockerfile and for each instruction or command in there it generates an image layer and stacks it.
-											The more insctructions or commands a Dockerfile includes, the more layers as stachk upon each other.</li>
+											The more insctructions or commands a Dockerfile includes, the more layers as stack upon each other.</li>
 										<li>Here comes Docker image definition which is a stack of different layers built due to what we got in Dockerfile.</li>
 									</ul>
 
@@ -239,7 +239,7 @@
 											- images that were built from that Dockerfile before were cached,<br>
 											- Docker builder goes through instrucion of Dockerfile and detects modified instruction,<br>
 											- Docker builder recognizes what layer in cached image modified instruction affects,<br>
-											- Docker builder rebuilts that image layer and all the onec coming after.
+											- Docker builder rebuilts that image layer and all the ones coming after.
 										</li>
 										<li>Caching mechanizm works the best when we place the insctructions that may undergo some modifications after the ones that will be stable and unchanged along the time.</li>
 									</ul>
